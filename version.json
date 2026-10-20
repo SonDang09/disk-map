@@ -1,11 +1,11 @@
 {
- "version": "0.9.1",
- "build": 79,
+ "version": "0.9.2",
+ "build": 80,
  "date": "2026-10-20",
  "min_macos": "13.0",
- "url": "https://github.com/SonDang09/disk-map/releases/download/v0.9.1/Disk-Map-0.9.1-79.dmg",
- "sha256": "49a47b91b54f1eee62241d9201dcd35521aceadc5a8c4279262af88fb8224e8c",
- "size": 30820073,
- "notes": "Bản 0.9.1:\n- Tự cập nhật: Disk Map tự kiểm bản mới mỗi ngày; vào Giới thiệu › Phiên bản bấm \"Cập nhật lên …\" là app tự tải, kiểm chữ ký của nhà phát triển, thay bản cũ và mở lại. Từ bản này không cần chạy lệnh Terminal khi cập nhật.\n- Hộp thoại không còn làm mờ phần app phía sau.",
- "sig": "6413a32d9a35ae9d4838956c37d14b2e9bd49ee8d43e750368353f517edf8d27a23aaaf26d44d6532f6cb62e4ef60041d723372bdb469117f0ccba171bd74b03"
+ "url": "https://github.com/SonDang09/disk-map/releases/download/v0.9.2/Disk-Map-0.9.2-80.dmg",
+ "sha256": "a297707bac04a8ff2406303d9acd08cef0252b6cbca19c139b6c91efe695b702",
+ "size": 30821961,
+ "notes": "Bản 0.9.2:\n- Dọn nhanh và gọn hơn: bấm xác nhận là có kết quả ngay (trước phải chờ khoảng 2 giây và một hộp đếm ngược 10 giây), không còn quét lại cả bản đồ sau mỗi lần dọn.\n- Hộp xác nhận chỉ hiện đỏ khi có thao tác không lấy lại được (dọn sạch Thùng rác, lệnh dọn Docker…); dọn cache và bản build tạo lại được dùng nút xanh, ghi rõ từng loại thao tác.\n- Cho nhiều mục vào Thùng rác cùng lúc nhanh hơn khoảng 6 lần.",
+ "sig": "7227c3b9db7ec99154170b202aced62901d7bf7ec0be68aaeefaa52dedd052492f6b63c498e1ae48202097b3ed8df306d416477cdfdef4cbf81e945e29bf7a0e"
 }
