@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disk Map: dọn ổ đĩa cho Mac</title>
+<meta name="description" content="Disk Map cho macOS: xem thư mục nào chiếm chỗ, dọn cache, log, node_modules, file cài đặt, gỡ app kèm file sót và dọn Google Drive. Chạy trên máy, không gửi dữ liệu đi đâu.">
+<meta property="og:title" content="Disk Map: dọn ổ đĩa cho Mac">
+<meta property="og:description" content="Xem thư mục nào chiếm chỗ và dọn an toàn: cache, log, node_modules, file cài đặt, app kèm file sót, Google Drive.">
+<meta property="og:image" content="https://diskmap.sondang.online/assets/tong-quan.jpg">
+<meta property="og:url" content="https://diskmap.sondang.online/">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">Disk Map</a>
+    <nav class="links"><a href="#tinh-nang">Tính năng</a><a href="#gia">Giá</a><a href="#cai-dat">Cài đặt</a><a href="privacy.html">Quyền riêng tư</a></nav>
+  </header>
+
+  <div class="hero">
+    <img class="logo" src="assets/icon.svg" alt="Biểu tượng Disk Map">
+    <h1>Biết thư mục nào đang ăn ổ đĩa, rồi dọn an toàn</h1>
+    <p class="lead">Disk Map quét thư mục home của bạn, vẽ bản đồ dung lượng và chỉ ra phần dọn được: cache, log, node_modules, file cài đặt, app cũ kèm file sót. Có cả mục dọn file trùng và file lớn trên Google Drive.</p>
+    <a class="cta" href="https://github.com/SonDang09/disk-map/releases/latest/download/Disk-Map.dmg">Tải Disk Map cho Mac</a>
+    <div class="meta">Bản thử 0.9 · 29 MB · Mac chip Apple (M1 trở lên), macOS 13 trở lên · <a href="https://github.com/SonDang09/disk-map/releases">Các bản phát hành</a></div>
+  </div>
+
+  <figure class="shot">
+    <img src="assets/tong-quan.jpg" width="1600" height="1000" alt="Màn Tổng quan của Disk Map: vòng dung lượng theo loại dữ liệu, mục có thể dọn ngay và sức khoẻ máy">
+    <figcaption>Màn Tổng quan: dung lượng chia theo loại dữ liệu và phần có thể dọn ngay. Ảnh chụp với dữ liệu mẫu.</figcaption>
+  </figure>
+
+  <section id="tinh-nang">
+    <h2>Dọn được gì</h2>
+    <p class="sub">Mỗi mục ghi rõ dọn xong thì ảnh hưởng gì. Mục tạo lại được thì xoá hẳn để có chỗ ngay; mục cần cân nhắc thì vào Thùng rác để còn lấy lại.</p>
+    <div class="grid">
+      <div class="card"><h3>Bản đồ dung lượng</h3><p>Thư mục trong home hiện thành các ô theo kích thước. Lần quét sau đánh dấu mục nào vừa phình to.</p></div>
+      <div class="card"><h3>Dọn sâu</h3><p>Cache ứng dụng, cache trình duyệt và app Electron, log cũ, Thùng rác. Cache của app đang mở không tự được chọn.</p></div>
+      <div class="card"><h3>Dự án code</h3><p>node_modules, thư mục build, target, venv tạo lại được. Thư mục có file git đang theo dõi thì bỏ qua.</p></div>
+      <div class="card"><h3>File cài đặt và file lớn</h3><p>File .dmg, .pkg đã cài xong trong Downloads, Desktop; file lớn từ 500 MB trở lên để bạn tự xem trước khi bỏ.</p></div>
+      <div class="card"><h3>Gỡ ứng dụng</h3><p>Gỡ app cùng dữ liệu nó để lại trong Application Support, Caches, Preferences, LaunchAgents. Tất cả vào Thùng rác.</p></div>
+      <div class="card"><h3>Google Drive <span class="tag">đang thử</span></h3><p>Tìm file trùng, file lớn và Thùng rác trên tài khoản Google, dọn ngay trên đám mây, không cần cài app Google Drive.</p></div>
+      <div class="card"><h3>Cập nhật app</h3><p>Liệt kê app có bản mới, kể cả app cài qua Homebrew.</p></div>
+      <div class="card"><h3>Theo dõi máy</h3><p>CPU, RAM, GPU, ổ đĩa, mạng, pin và tiến trình đang ngốn tài nguyên. Biểu tượng trên thanh menu cho xem số GB còn trống.</p></div>
+    </div>
+  </section>
+
+  <figure class="shot">
+    <img src="assets/google-drive.jpg" width="1600" height="1000" loading="lazy" alt="Màn Google Drive của Disk Map: thanh dung lượng tài khoản Google, file trùng, file lớn và Thùng rác Drive">
+    <figcaption>Màn Google Drive: dung lượng tài khoản, file trùng giữ lại một bản, file lớn. Ảnh chụp với tài khoản mẫu.</figcaption>
+  </figure>
+
+  <section id="an-toan">
+    <h2>Chạy trên máy bạn</h2>
+    <p class="sub">Chi tiết ở trang <a href="privacy.html">Quyền riêng tư</a>.</p>
+    <div class="card">
+      <ul class="clean">
+        <li>Chỉ đo dung lượng thư mục và file. Disk Map không mở, không đọc nội dung file.</li>
+        <li>Không gửi dữ liệu ổ đĩa, tên file hay đường dẫn ra ngoài. Kiểm tra key Pro làm ngay trên máy.</li>
+        <li>Mỗi lần dọn có một hộp xác nhận cho cả lô; mục cần cân nhắc phải tick “đã đọc” mới làm được.</li>
+        <li>Không đụng vào iCloud, Ảnh, thư, khoá đăng nhập hay dữ liệu app sandbox. Danh sách quét quá 30 phút thì phải quét lại mới dọn.</li>
+        <li>Mọi lần dọn ghi vào nhật ký trên máy, xem lại được trong app.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gia">
+    <h2>Giá</h2>
+    <p class="sub">Cài lần đầu được dùng thử bản Pro 7 ngày. Hết hạn thì các tính năng miễn phí vẫn dùng bình thường, dữ liệu không mất.</p>
+    <div class="price">
+      <div class="card">
+        <h3>Miễn phí</h3>
+        <div class="amount">0đ</div>
+        <ul class="clean">
+          <li>Bản đồ dung lượng</li>
+          <li>Dọn sâu</li>
+          <li>File cài đặt, File lớn</li>
+          <li>Theo dõi CPU, RAM, ổ đĩa, mạng, pin</li>
+          <li>Quét và xem danh sách ở mọi màn</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <div class="amount">499.000đ</div>
+        <ul class="clean">
+          <li>Dọn Dự án code</li>
+          <li>Gỡ ứng dụng kèm file sót</li>
+          <li>Dọn Google Drive</li>
+          <li>Cập nhật ứng dụng, Dọn nhanh một chạm</li>
+          <li>Thoát tiến trình, danh sách bỏ qua, thông báo, mở khi đăng nhập</li>
+        </ul>
+        <p style="margin-top:12px">Mua một lần, dùng mãi bản 1.x trên 2 máy Mac. Mua qua email <a href="mailto:sondang@genplusmedia.com?subject=Mua%20Disk%20Map%20Pro">sondang@genplusmedia.com</a>, key gửi lại qua email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cai-dat">
+    <h2>Cài đặt</h2>
+    <p class="sub">Bản 0.9 là bản thử, chưa được Apple công chứng (notarize), nên macOS chặn ở lần mở đầu. Làm một lần như sau:</p>
+    <div class="card">
+      <ol class="steps">
+        <li>Mở file Disk-Map.dmg vừa tải, kéo Disk Map vào thư mục Applications.</li>
+        <li>Mở Disk Map trong Applications. macOS báo không mở được vì không xác minh được nhà phát triển: bấm Xong.</li>
+        <li>Vào Cài đặt hệ thống › Quyền riêng tư &amp; Bảo mật, kéo xuống phần Bảo mật, bấm “Vẫn mở” cạnh dòng Disk Map, rồi xác nhận bằng mật khẩu máy.</li>
+        <li>Lần quét đầu mất khoảng một phút. Các lần sau nhanh hơn vì app nhớ thư mục nào lâu.</li>
+      </ol>
+      <div class="note">Google Drive đang ở chế độ thử của Google: chỉ tài khoản đã được thêm vào danh sách thử mới kết nối được. Muốn thử, gửi địa chỉ Gmail tới <a href="mailto:sondang@genplusmedia.com?subject=Th%E1%BB%AD%20Google%20Drive%20trong%20Disk%20Map">sondang@genplusmedia.com</a>.</div>
+    </div>
+  </section>
+
+  <footer>
+    Disk Map · <a href="privacy.html">Quyền riêng tư</a> · <a href="https://github.com/SonDang09/disk-map/releases">Bản phát hành</a> · Liên hệ <a href="mailto:sondang@genplusmedia.com">sondang@genplusmedia.com</a>
+  </footer>
+</div>
+</body>
+</html>

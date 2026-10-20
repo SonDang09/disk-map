@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 824 824">
+  <!-- Icon Disk Map (nguồn duy nhất): 5 ô treemap kính trên nền xanh hệ thống → chàm. Khung 824 = thân icon macOS (canvas 1024, lề 100).
+       app/make-icon.swift vẽ ra icon Dock; scan.render_html nhúng làm logo thanh bên. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f8cff"/><stop offset="1" stop-color="#5b3fe0"/></linearGradient>
+    <radialGradient id="hi" cx=".22" cy=".12" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="t1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".86"/></linearGradient>
+    <linearGradient id="t2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".72"/><stop offset="1" stop-color="#fff" stop-opacity=".56"/></linearGradient>
+    <linearGradient id="t3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".52"/><stop offset="1" stop-color="#fff" stop-opacity=".38"/></linearGradient>
+    <linearGradient id="t4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity=".26"/></linearGradient>
+    <linearGradient id="t5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/></linearGradient>
+  </defs>
+  <rect width="824" height="824" rx="185" fill="url(#bg)"/>
+  <rect width="824" height="824" rx="185" fill="url(#hi)"/>
+  <rect x="3" y="3" width="818" height="818" rx="182" fill="none" stroke="url(#rim)" stroke-width="6"/>
+  <rect x="120" y="120" width="332" height="584" rx="44" fill="url(#t1)"/>
+  <rect x="476" y="120" width="228" height="316" rx="40" fill="url(#t2)"/>
+  <rect x="476" y="460" width="124" height="244" rx="34" fill="url(#t3)"/>
+  <rect x="624" y="460" width="80" height="132" rx="26" fill="url(#t4)"/>
+  <rect x="624" y="616" width="80" height="88" rx="26" fill="url(#t5)"/>
+</svg>

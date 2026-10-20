@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quyền riêng tư · Disk Map</title>
+<meta name="description" content="Disk Map thu thập gì, lưu ở đâu và dùng mạng khi nào, gồm cả cách app dùng dữ liệu Google Drive.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="">Disk Map</a>
+    <nav class="links"><a href="./#tinh-nang">Tính năng</a><a href="./#gia">Giá</a><a href="./#cai-dat">Cài đặt</a></nav>
+  </header>
+
+  <main class="doc">
+    <h1>Chính sách quyền riêng tư</h1>
+    <p class="updated">Cập nhật ngày 20/10/2026 · áp dụng cho Disk Map trên macOS</p>
+
+    <p>Disk Map là ứng dụng chạy trên máy Mac của bạn. Không có máy chủ nào của Disk Map nhận dữ liệu từ app, và app không có tài khoản người dùng.</p>
+
+    <h2>Dữ liệu trên máy</h2>
+    <ul>
+      <li>Khi quét, app chỉ đo dung lượng thư mục và file (bằng <code>du</code>, <code>stat</code>), đọc tên và đường dẫn. App không mở, không đọc nội dung file.</li>
+      <li>Kết quả quét, lịch sử quét, nhật ký dọn và cài đặt lưu trong <code>~/Library/Application Support/Disk Map</code>. Gỡ app rồi xoá thư mục này là hết dấu vết.</li>
+      <li>Key Pro và thời hạn dùng thử được kiểm ngay trên máy, không gửi đi đâu.</li>
+      <li>Các thư mục macOS bảo vệ (Desktop, Documents, Downloads…) chỉ được đọc sau khi bạn bấm cấp quyền trong app.</li>
+    </ul>
+
+    <h2>Khi nào app dùng mạng</h2>
+    <ul>
+      <li>Màn Cập nhật app: tải feed cập nhật mà chính từng ứng dụng công bố (định dạng Sparkle) và đọc danh sách Homebrew trên máy, chỉ để so số phiên bản. App không gửi danh sách ứng dụng của bạn cho ai.</li>
+      <li>Màn Google Drive, chỉ khi bạn tự kết nối tài khoản Google (xem phần dưới).</li>
+    </ul>
+    <p>Ngoài hai chỗ trên, Disk Map không kết nối mạng.</p>
+
+    <h2>Google Drive</h2>
+    <p>Màn Google Drive giúp tìm file trùng, file lớn và Thùng rác trên tài khoản Google Drive của bạn. Tính năng chỉ chạy khi bạn bấm “Kết nối Google Drive” và đồng ý trên trang của Google.</p>
+    <ul>
+      <li><b>Quyền xin:</b> <code>https://www.googleapis.com/auth/drive</code>, cần để liệt kê file và chuyển file bạn chọn vào Thùng rác của Drive.</li>
+      <li><b>Dữ liệu app đọc:</b> địa chỉ email và tên của tài khoản, dung lượng đã dùng của tài khoản, và với mỗi file của bạn: tên, loại, kích thước, mã MD5 do Google tính, thư mục cha, ngày tạo, ngày sửa, ngày bạn mở lần cuối, có đang chia sẻ hay không, đường dẫn mở trên Drive. App không tải nội dung file về.</li>
+      <li><b>Việc app làm trên Drive:</b> chỉ khi bạn chọn và xác nhận, app chuyển file vào Thùng rác của Drive (khôi phục được trong 30 ngày), hoặc dọn sạch Thùng rác của Drive nếu bạn chọn mục đó (không lấy lại được).</li>
+      <li><b>Nơi lưu:</b> mã duy trì đăng nhập (refresh token) lưu trong <code>~/Library/Application Support/Disk Map/gdrive.json</code>, chỉ tài khoản macOS của bạn đọc được. Danh sách file vừa quét lưu cùng thư mục để hiện lại khi mở app. Mã truy cập ngắn hạn chỉ nằm trong bộ nhớ.</li>
+      <li><b>Chia sẻ:</b> app gọi thẳng Google Drive API từ máy bạn. Dữ liệu từ Google không đi qua máy chủ nào khác, không được bán, không dùng cho quảng cáo và không dùng để huấn luyện mô hình AI.</li>
+      <li><b>Ngắt kết nối:</b> nút “Ngắt kết nối” trong app thu hồi quyền ở Google và xoá mã trên máy. Bạn cũng có thể gỡ quyền ở <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    </ul>
+    <p lang="en">Disk Map’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>Liên hệ</h2>
+    <p>Câu hỏi về quyền riêng tư: <a href="mailto:sondang@genplusmedia.com">sondang@genplusmedia.com</a>.</p>
+  </main>
+
+  <footer>
+    Disk Map · <a href="./">Trang chủ</a> · <a href="https://github.com/SonDang09/disk-map/releases">Bản phát hành</a>
+  </footer>
+</div>
+</body>
+</html>
