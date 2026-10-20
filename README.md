@@ -8,11 +8,18 @@ Yêu cầu: Mac chip Apple (M1 trở lên), macOS 13 trở lên.
 
 ## Cài đặt
 
-Bản 0.9 là bản thử, chưa được Apple công chứng (notarize), nên macOS chặn ở lần mở đầu:
+Bản 0.9 là bản thử, chưa được Apple công chứng (notarize), nên macOS chặn app tải từ mạng về. Gỡ chặn một lần sau khi cài:
 
-1. Mở `Disk-Map.dmg`, kéo Disk Map vào thư mục Applications rồi mở app.
-2. macOS báo không xác minh được nhà phát triển: đóng hộp thoại.
-3. Vào Cài đặt hệ thống › Quyền riêng tư & Bảo mật, bấm "Vẫn mở" cạnh dòng Disk Map, xác nhận bằng mật khẩu máy.
+1. Mở `Disk-Map.dmg`, kéo Disk Map vào thư mục Applications.
+2. Mở Terminal, chạy:
+
+   ```bash
+   xattr -dr com.apple.quarantine "/Applications/Disk Map.app"
+   ```
+
+3. Mở Disk Map trong Applications như app bình thường.
+
+Lệnh chỉ gỡ cờ "tải từ Internet" của riêng Disk Map, không đổi cài đặt bảo mật của máy. Đã thử trên macOS 26, MacBook M4.
 
 ## Quyền riêng tư
 

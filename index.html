@@ -98,14 +98,16 @@
 
   <section id="cai-dat">
     <h2>Cài đặt</h2>
-    <p class="sub">Bản 0.9 là bản thử, chưa được Apple công chứng (notarize), nên macOS chặn ở lần mở đầu. Làm một lần như sau:</p>
+    <p class="sub">Bản 0.9 là bản thử, chưa được Apple công chứng (notarize), nên macOS chặn app tải từ mạng về. Gỡ chặn bằng một lệnh trong Terminal, làm một lần sau khi cài.</p>
     <div class="card">
       <ol class="steps">
         <li>Mở file Disk-Map.dmg vừa tải, kéo Disk Map vào thư mục Applications.</li>
-        <li>Mở Disk Map trong Applications. macOS báo không mở được vì không xác minh được nhà phát triển: bấm Xong.</li>
-        <li>Vào Cài đặt hệ thống › Quyền riêng tư &amp; Bảo mật, kéo xuống phần Bảo mật, bấm “Vẫn mở” cạnh dòng Disk Map, rồi xác nhận bằng mật khẩu máy.</li>
-        <li>Lần quét đầu mất khoảng một phút. Các lần sau nhanh hơn vì app nhớ thư mục nào lâu.</li>
+        <li>Mở Terminal (bấm ⌘ + Space, gõ <b>Terminal</b>, Enter), dán lệnh dưới đây rồi Enter:
+          <pre class="cmd"><code>xattr -dr com.apple.quarantine "/Applications/Disk Map.app"</code></pre>
+          Lệnh không in gì ra là đã xong.</li>
+        <li>Mở Disk Map trong Applications như app bình thường. Lần quét đầu mất khoảng một phút, các lần sau nhanh hơn.</li>
       </ol>
+      <p style="margin:14px 0 0;color:var(--mut);font-size:15.5px">Lệnh trên chỉ gỡ cờ “tải từ Internet” mà macOS gắn vào riêng Disk Map, không đổi cài đặt bảo mật của máy. Chỉ chạy lệnh này với file tải từ trang này. Đã thử trên macOS 26, MacBook M4.</p>
       <div class="note">Google Drive đang ở chế độ thử của Google: chỉ tài khoản đã được thêm vào danh sách thử mới kết nối được. Muốn thử, gửi địa chỉ Gmail tới <a href="mailto:sondang@genplusmedia.com?subject=Th%E1%BB%AD%20Google%20Drive%20trong%20Disk%20Map">sondang@genplusmedia.com</a>.</div>
     </div>
   </section>
