@@ -1,0 +1,11 @@
+{
+ "version": "0.9.1",
+ "build": 79,
+ "date": "2026-10-20",
+ "min_macos": "13.0",
+ "url": "https://github.com/SonDang09/disk-map/releases/download/v0.9.1/Disk-Map-0.9.1-79.dmg",
+ "sha256": "49a47b91b54f1eee62241d9201dcd35521aceadc5a8c4279262af88fb8224e8c",
+ "size": 30820073,
+ "notes": "Bản 0.9.1:\n- Tự cập nhật: Disk Map tự kiểm bản mới mỗi ngày; vào Giới thiệu › Phiên bản bấm \"Cập nhật lên …\" là app tự tải, kiểm chữ ký của nhà phát triển, thay bản cũ và mở lại. Từ bản này không cần chạy lệnh Terminal khi cập nhật.\n- Hộp thoại không còn làm mờ phần app phía sau.",
+ "sig": "6413a32d9a35ae9d4838956c37d14b2e9bd49ee8d43e750368353f517edf8d27a23aaaf26d44d6532f6cb62e4ef60041d723372bdb469117f0ccba171bd74b03"
+}
