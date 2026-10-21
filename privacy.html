@@ -23,7 +23,8 @@
 
     <h2>Dữ liệu trên máy</h2>
     <ul>
-      <li>Khi quét, app chỉ đo dung lượng thư mục và file (bằng <code>du</code>, <code>stat</code>), đọc tên và đường dẫn. Để nhận biết và phân loại, app đọc thông tin mô tả của ứng dụng (<code>Info.plist</code>: tên, phiên bản, mã ứng dụng) và thông tin theo dõi của git ở thư mục dự án. App không mở, không đọc nội dung tài liệu, ảnh hay video cá nhân của bạn.</li>
+      <li>Khi quét, app chỉ đo dung lượng thư mục và file (bằng <code>du</code>, <code>stat</code>), đọc tên và đường dẫn. Để nhận biết và phân loại, app đọc thông tin mô tả của ứng dụng (<code>Info.plist</code>: tên, phiên bản, mã ứng dụng) và, ở thư mục dự án có git, hỏi git cài trên máy (<code>git ls-files</code>, <code>git check-ignore</code>) xem một file/thư mục có được git theo dõi hay bị bỏ qua (ignore) không — chỉ để biết mục đó có an toàn để dọn, không đọc nội dung file và không sửa kho git. App không mở, không đọc nội dung tài liệu, ảnh hay video cá nhân của bạn.</li>
+      <li>Mục File lớn có tuỳ chọn quét thêm thư mục Movies, Pictures, Documents. Tuỳ chọn này mặc định TẮT. Chỉ khi bạn tự bật trong Cài đặt, app mới cần quyền Toàn quyền truy cập ổ đĩa (Full Disk Access); chưa cấp quyền thì app bỏ qua ba thư mục này và chỉ hiện hướng dẫn cấp quyền, không tự mở Cài đặt hệ thống. Khi quét, app chỉ dùng <code>find</code> và đọc kích thước, thời gian sửa đổi (metadata) của file, không mở hay đọc nội dung file.</li>
       <li>Kết quả quét, lịch sử quét, nhật ký dọn và cài đặt lưu trong <code>~/Library/Application Support/Disk Map</code>. Gỡ app rồi xoá thư mục này là hết dấu vết.</li>
       <li>Key Pro và thời hạn dùng thử được kiểm ngay trên máy, không gửi đi đâu.</li>
       <li>Các thư mục macOS bảo vệ (Desktop, Documents, Downloads…) chỉ được đọc sau khi bạn bấm cấp quyền trong app.</li>
@@ -31,7 +32,7 @@
 
     <h2>Khi nào app dùng mạng</h2>
     <ul>
-      <li>Màn Cập nhật ứng dụng khác: để tìm bản mới của các app bạn đã cài, app đọc danh sách Homebrew trên máy, hỏi App Store (qua <code>mas</code>) và máy chủ cập nhật của Apple (qua <code>softwareupdate</code>), và tải feed cập nhật mà chính từng ứng dụng công bố (định dạng Sparkle, chỉ qua HTTPS). App chỉ so số phiên bản, không gửi danh sách ứng dụng của bạn cho máy chủ nào của Disk Map.</li>
+      <li>Màn Cập nhật ứng dụng khác: để tìm bản mới của các app bạn đã cài, app hỏi Homebrew trên máy danh sách app đã cài (<code>brew info --cask --installed</code>; app tắt tự cập nhật và thống kê của Homebrew bằng <code>HOMEBREW_NO_AUTO_UPDATE</code>, <code>HOMEBREW_NO_ANALYTICS</code>, nhưng tuỳ cấu hình Homebrew trên máy, lệnh <code>brew</code> vẫn có thể tự kết nối mạng), hỏi App Store (qua <code>mas</code>) và máy chủ cập nhật của Apple (qua <code>softwareupdate</code>), và tải feed cập nhật mà chính từng ứng dụng công bố (định dạng Sparkle, chỉ qua HTTPS). App chỉ so số phiên bản, không gửi danh sách ứng dụng của bạn cho máy chủ nào của Disk Map.</li>
       <li>Kiểm tra bản mới của Disk Map: mỗi ngày tải một file <code>version.json</code> từ diskmap.sondang.online (tắt được trong Cài đặt). Khi bạn bấm Cập nhật, app tải file cài từ GitHub, kiểm chữ ký của nhà phát triển rồi mới cài. Các yêu cầu này không kèm thông tin nhận dạng máy của bạn.</li>
       <li>Màn Ổ đĩa &amp; mạng: khi bạn mở màn theo dõi hệ thống, app đo độ trễ mạng bằng cách ping router trong mạng nội bộ của bạn (địa chỉ riêng tư), không bao giờ ping ra internet, không đọc tên Wi-Fi và không gửi gì đi.</li>
       <li>Màn Google Drive, chỉ khi bạn tự kết nối tài khoản Google (xem phần dưới).</li>
