@@ -17,13 +17,13 @@
 
   <main class="doc">
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="updated">Cập nhật ngày 20/10/2026 (bản 0.9.1) · áp dụng cho Disk Map trên macOS</p>
+    <p class="updated">Cập nhật ngày 21/10/2026 (bản 0.9.2) · áp dụng cho Disk Map trên macOS</p>
 
     <p>Disk Map là ứng dụng chạy trên máy Mac của bạn. Không có máy chủ nào của Disk Map nhận dữ liệu từ app, và app không có tài khoản người dùng.</p>
 
     <h2>Dữ liệu trên máy</h2>
     <ul>
-      <li>Khi quét, app chỉ đo dung lượng thư mục và file (bằng <code>du</code>, <code>stat</code>), đọc tên và đường dẫn. App không mở, không đọc nội dung file.</li>
+      <li>Khi quét, app chỉ đo dung lượng thư mục và file (bằng <code>du</code>, <code>stat</code>), đọc tên và đường dẫn. Để nhận biết và phân loại, app đọc thông tin mô tả của ứng dụng (<code>Info.plist</code>: tên, phiên bản, mã ứng dụng) và thông tin theo dõi của git ở thư mục dự án. App không mở, không đọc nội dung tài liệu, ảnh hay video cá nhân của bạn.</li>
       <li>Kết quả quét, lịch sử quét, nhật ký dọn và cài đặt lưu trong <code>~/Library/Application Support/Disk Map</code>. Gỡ app rồi xoá thư mục này là hết dấu vết.</li>
       <li>Key Pro và thời hạn dùng thử được kiểm ngay trên máy, không gửi đi đâu.</li>
       <li>Các thư mục macOS bảo vệ (Desktop, Documents, Downloads…) chỉ được đọc sau khi bạn bấm cấp quyền trong app.</li>
@@ -31,11 +31,12 @@
 
     <h2>Khi nào app dùng mạng</h2>
     <ul>
-      <li>Màn Cập nhật app: tải feed cập nhật mà chính từng ứng dụng công bố (định dạng Sparkle) và đọc danh sách Homebrew trên máy, chỉ để so số phiên bản. App không gửi danh sách ứng dụng của bạn cho ai.</li>
-      <li>Kiểm tra bản mới của Disk Map: mỗi ngày tải một file <code>version.json</code> từ diskmap.sondang.online (tắt được trong Cài đặt). Khi bạn bấm Cập nhật, app tải file cài từ GitHub, kiểm chữ ký của nhà phát triển rồi mới cài. Không gửi dữ liệu máy.</li>
+      <li>Màn Cập nhật ứng dụng khác: để tìm bản mới của các app bạn đã cài, app đọc danh sách Homebrew trên máy, hỏi App Store (qua <code>mas</code>) và máy chủ cập nhật của Apple (qua <code>softwareupdate</code>), và tải feed cập nhật mà chính từng ứng dụng công bố (định dạng Sparkle, chỉ qua HTTPS). App chỉ so số phiên bản, không gửi danh sách ứng dụng của bạn cho máy chủ nào của Disk Map.</li>
+      <li>Kiểm tra bản mới của Disk Map: mỗi ngày tải một file <code>version.json</code> từ diskmap.sondang.online (tắt được trong Cài đặt). Khi bạn bấm Cập nhật, app tải file cài từ GitHub, kiểm chữ ký của nhà phát triển rồi mới cài. Các yêu cầu này không kèm thông tin nhận dạng máy của bạn.</li>
+      <li>Màn Ổ đĩa &amp; mạng: khi bạn mở màn theo dõi hệ thống, app đo độ trễ mạng bằng cách ping router trong mạng nội bộ của bạn (địa chỉ riêng tư), không bao giờ ping ra internet, không đọc tên Wi-Fi và không gửi gì đi.</li>
       <li>Màn Google Drive, chỉ khi bạn tự kết nối tài khoản Google (xem phần dưới).</li>
     </ul>
-    <p>Ngoài ba chỗ trên, Disk Map không kết nối mạng.</p>
+    <p>Ngoài các chỗ trên, Disk Map không kết nối mạng. App không có mã theo dõi (telemetry) và không gửi báo cáo lỗi về bất kỳ máy chủ nào.</p>
 
     <h2>Google Drive</h2>
     <p>Màn Google Drive giúp tìm file trùng, file lớn và Thùng rác trên tài khoản Google Drive của bạn. Tính năng chỉ chạy khi bạn bấm “Kết nối Google Drive” và đồng ý trên trang của Google.</p>
